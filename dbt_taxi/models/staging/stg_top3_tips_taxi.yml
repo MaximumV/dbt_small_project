@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: stg_betting__bet_item
+    columns:
+      - name: taxi_id
+      - name: year_month_start
+      - name: tips_sum_start

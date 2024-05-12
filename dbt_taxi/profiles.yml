@@ -1,0 +1,14 @@
+dbt_taxi:
+  outputs:
+    dev:
+      dataset: dbt_taxi
+      job_execution_timeout_seconds: 1200
+      job_retries: 1
+      keyfile: /home/andrey/DE_code/dbt_small_project/client_secrets.json
+      location: US
+      method: service-account
+      priority: interactive
+      project: project-id-3586412713814502220
+      threads: 4
+      type: bigquery
+  target: dev

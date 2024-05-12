@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: taxi_tips_monthly_delta
+    description: >
+      Incremental, partitioned mart on 
+      Unique by taxi_id+year_month
+    columns:
+      - name: taxi_id
+        description: >
+          taxi id. In the data we have only 3 taxies, which got the highest tips amount during April 2018
+      - name: year_month
+        description: >
+          Truncated date to month, format "2018-04-01" menas it's April 2018
+      - name: tips_sum
+        description: >
+          Aggregated sum of the tips by taxi and  year_month
+      - name: tips_change
+        description: >
+          Delta of next months tips compare to previous month. Example: May 2018 tips_sum/ April 2018 tips_sum
